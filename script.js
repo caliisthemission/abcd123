@@ -1,3 +1,22 @@
+// Background music
+const music = document.getElementById('bg-music');
+
+// Try to autoplay, fallback to play on first interaction
+function startMusic() {
+    music.volume = 0.4;
+    music.play().catch(() => {});
+}
+
+document.addEventListener('click', function startOnInteraction() {
+    startMusic();
+    document.removeEventListener('click', startOnInteraction);
+}, { once: true });
+
+// Try immediate autoplay
+window.addEventListener('load', () => {
+    startMusic();
+});
+
 // Cursor following effect
 const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', (e) => {
@@ -6,7 +25,7 @@ document.addEventListener('mousemove', (e) => {
 });
 
 // Typing effect for greeting
-const greetingText = "Hey You Know What! You're the most adorable human i ever met! 💖";
+const greetingText = "If I could give you one thing this year, it would be seeing yourself the way I see you.";
 const greetingElement = document.querySelector('.greeting');
 let charIndex = 0;
 
@@ -14,7 +33,7 @@ function typeGreeting() {
     if (charIndex < greetingText.length) {
         greetingElement.textContent += greetingText.charAt(charIndex);
         charIndex++;
-        setTimeout(typeGreeting, 100);
+        setTimeout(typeGreeting, 60);
     }
 }
 
@@ -28,7 +47,6 @@ function createFloating() {
     element.style.top = Math.random() * 100 + 'vh';
     element.style.fontSize = (Math.random() * 20 + 20) + 'px';
     document.body.appendChild(element);
-
     gsap.to(element, {
         y: -500,
         x: Math.random() * 100 - 50,
@@ -42,54 +60,38 @@ function createFloating() {
 
 // Initialize animations
 window.addEventListener('load', () => {
-    // Title animation
     gsap.to('h1', {
         opacity: 1,
         duration: 1,
         y: 20,
         ease: "bounce.out"
     });
-
-    // Button animation
     gsap.to('.cta-button', {
         opacity: 1,
         duration: 1,
         y: -20,
         ease: "back.out"
     });
-
-    // Start typing effect
     typeGreeting();
-
-    // Create floating elements periodically
     setInterval(createFloating, 1000);
 });
 
 // Hover effects
-       // Hover effects
-       document.querySelectorAll('.cta-button').forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            gsap.to(button, {
-                scale: 1.1,
-                duration: 0.3
-            });
-        });
-
-        button.addEventListener('mouseleave', () => {
-            gsap.to(button, {
-                scale: 1,
-                duration: 0.3
-            });
-        });
-
-        // Smooth page transition on click
-        button.addEventListener('click', () => {
-            gsap.to('body', {
-                opacity: 0,
-                duration: 1,
-                onComplete: () => {
-                    window.location.href = 'cause.html'; // Replace with the actual URL of the next page
-                }
-            });
+document.querySelectorAll('.cta-button').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+        gsap.to(button, { scale: 1.1, duration: 0.3 });
+    });
+    button.addEventListener('mouseleave', () => {
+        gsap.to(button, { scale: 1, duration: 0.3 });
+    });
+    button.addEventListener('click', () => {
+        gsap.to('body', {
+            opacity: 0,
+            duration: 1,
+            onComplete: () => {
+                window.location.href = 'cause.html';
+            }
         });
     });
+});
+  

@@ -37,21 +37,21 @@ const shuffleButton = document.querySelector('.shuffle-button');
 const reasonCounter = document.querySelector('.reason-counter');
 let isTransitioning = false;
 
-// Create reason card with image on hover
 function createReasonCard(reason) {
     const card = document.createElement('div');
     card.className = 'reason-card';
+
+    const img = document.createElement('img');
+    img.src = reason.image;
+    img.className = 'reason-profile-img';
+    img.alt = 'Memory';
 
     const text = document.createElement('div');
     text.className = 'reason-text';
     text.innerHTML = reason.text;
 
-    const imgOverlay = document.createElement('div');
-    imgOverlay.className = 'gif-overlay';
-    imgOverlay.innerHTML = `<img src="${reason.image}" alt="Memory">`;
-
+    card.appendChild(img);
     card.appendChild(text);
-    card.appendChild(imgOverlay);
 
     gsap.from(card, {
         opacity: 0,

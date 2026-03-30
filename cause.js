@@ -10,7 +10,7 @@ document.addEventListener('click', function startOnInteraction() {
 // Reasons database
 const reasons = [
     {
-        text: "Hey Liyah, good morning baby, it's a really special day, for us, but for me particularly. It's the birthday of the woman I love, and I want to make her feel special. I want her to know I'm really very grateful for having her and she means a lot to me. All i be doing the wholeday is wondering about her and missing her. She's lwk stuck with me, I'm not letting her go anywhere, I'd be damned if I ever did. The "she" is you, in case you were wondering.",
+        text: "Hey Liyah, good morning baby, it's a really special day, for us, but for me particularly. It's the birthday of the woman I love, and I want to make her feel special. I want her to know I'm really very grateful for having her and she means a lot to me. All i be doing the wholeday is wondering about her and missing her. She's lwk stuck with me, I'm not letting her go anywhere, I'd be damned if I ever did. The 'she' is you, in case you were wondering.",
         image: "img1.jpeg"
     },
     {

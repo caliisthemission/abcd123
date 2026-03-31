@@ -22,7 +22,7 @@ const reasons = [
         image: "img3.jpeg"
     },
     {
-        text: "I'm longing for the hatred you possess for your birthday to decrease upon reading this; even minutely would work. These little things adding up every year, and one day you'll probably love your birthday, because I'm not going to forget it ever. I dont know if me writing this is gonna do any justice to how much this angel has bewitched me; i literally wonder about you the whole day ok anyway, I just hope that when it's finally time to give this to you, we're still together or at least in contact. Though I reckon I'd still find a way to send this over to you. Okay baby, I think it's time for me to go; until next year, Happy Birthday my Moroccan delight. Nadie como tú.",
+        text: "I'm longing for the hatred you possess for your birthday to decrease upon reading this; even minutely would work. These little things adding up every year, and one day you'll probably love your birthday, because I'm not going to forget it ever. I dont know if me writing this is gonna do any justice to how much this angel has bewitched me; i literally wonder about you the whole day yeaa ok anyway, I just hope that when it's finally time to give this to you, we're still together or at least in contact. Though I reckon I'd still find a way to send this over to you. Okay baby, I think it's time for me to go; until next year, Happy Birthday my Moroccan delight. Nadie como tú.",
         image: "img4.jpeg"
     }
 ];
